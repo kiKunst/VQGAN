@@ -12,6 +12,10 @@ window.addEventListener("DOMContentLoaded", () => {
             main.classList.remove("speaking");
             recognition.stop();
             button.textContent = "Start listening";
+            const children = result.lastChild;
+            const text = children.textContent;
+            console.log(text);
+            window.location.href = "/image?text=" + text;
           };
 
           const start = () => {
