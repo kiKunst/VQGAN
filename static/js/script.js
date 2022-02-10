@@ -15,11 +15,7 @@ window.addEventListener("DOMContentLoaded", () => {
             const children = result.lastChild;
             const text = children.textContent;
             console.log(text);
-            fetch("/convert?text="+ text).then(function(result) { 
-            return result.json();
-              }).then(function(result) {
-                window.location.href = result;
-             })                     
+            window.location.href = "/convert?text=" + text;
           };
 
           const start = () => {
