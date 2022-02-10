@@ -15,7 +15,11 @@ window.addEventListener("DOMContentLoaded", () => {
             const children = result.lastChild;
             const text = children.textContent;
             console.log(text);
-            window.location.href = "/image?text=" + text;
+            fetch("/convert?text="+ text).then(function(result) { 
+            return result.json();
+              }).then(function(result) {
+                window.location.href = result;
+             })                     
           };
 
           const start = () => {
