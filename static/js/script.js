@@ -14,12 +14,9 @@ window.addEventListener("DOMContentLoaded", () => {
             button.textContent = "Start listening";
             const children = result.lastChild;
             const text = children.textContent;
-                  if (text === empty || text === '') {
-                  text = "sound of silence"
-                  } else {
             console.log(text);
             window.location.href = "/convert?text=" + text;
-                  }
+     
           };
 
           const start = () => {
