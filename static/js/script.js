@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", () => {
             recognition.stop();
             button.textContent = "Start listening";
             const children = result.lastChild;
-            if (children = null) {
+            if (children === null) {
               const text = 'sound of silence';
               console.log(text);
               window.location.href = "/converter?text=" + text;      
