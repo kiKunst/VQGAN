@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", () => {
             if (children === null) {
               const text = 'sound of silence';
               console.log(text);
-              window.location.href = "/converter?text=" + text;      
+              window.location.href = "/convert?text=" + text;      
             } else {
             const text = children.textContent;
             console.log(text);
